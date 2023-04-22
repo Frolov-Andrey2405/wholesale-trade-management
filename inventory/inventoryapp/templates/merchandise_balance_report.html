@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<h1>Звіт про залишки товарів</h1>
+<table>
+  <tr>
+    <th>Товари</th>
+    <th>Одиниця</th>
+    <th>Баланс</th>
+  </tr>
+  {% for balance in balances %}
+  <tr>
+    <td>{{ balance.name }}</td>
+    <td>{{ balance.unit }}</td>
+    <td>{{ balance.balance }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

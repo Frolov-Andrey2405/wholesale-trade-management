@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Звіт про прибутки</h1>
+<table>
+    <tr>
+        <th>Тип накладної</th>
+        <th>Прибуток</th>
+    </tr>
+    {% for profit in profits %}
+    <tr>
+        <td>{{ profit.delivery_note__type }}</td>
+        <td>{{ profit.profit }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

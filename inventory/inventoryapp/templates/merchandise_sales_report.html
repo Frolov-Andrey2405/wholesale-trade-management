@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Звіт про продажі товарів</h1>
+
+<table>
+  <tr>
+    <th>Товари</th>
+    <th>Кількість</th>
+    <th>Виручка</th>
+  </tr>
+  {% for sale in sales %}
+  <tr>
+    <td>{{ sale.goods__name }}</td>
+    <td>{{ sale.quantity }}</td>
+    <td>{{ sale.revenue }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
